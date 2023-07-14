@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    background-color: red;
+    padding: 1rem 2.3rem;
+    box-shadow: 0 0 6px 4px gray;
+    font-size: 18px;
+    color: aliceblue;
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaley(0);
+    transform-origin: right;
+    transition: all 1s;
+    z-index: -1;
+
+}
+.btn:hover::before{
+    transform: scaley(1);
+}
+
